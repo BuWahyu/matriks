@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Operasi Matriks Kelas XI SMA — V6</title>
+  <meta name="description"
+    content="Media belajar operasi matriks untuk kelas XI SMA dengan alur seperti ebook, contoh beragam, determinan ordo 3, invers 2x2 visual, latihan, dan kuis." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f5f7ff',
+              100: '#ebefff',
+              500: '#6366f1',
+              600: '#5458e8',
+              700: '#4347d3'
+            }
+          },
+          boxShadow: {
+            soft: '0 18px 60px rgba(15, 23, 42, 0.08)',
+            card: '0 8px 30px rgba(15, 23, 42, 0.06)'
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bg-slate-50 text-slate-800">
+  <header class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+      <a href="#hero" class="flex items-center gap-3">
+        <img src="img/bu-wahyu.jpg" alt="Logo Jawa Tengah" class="w-12 h-12 object-contain">
+
+        <div>
+          <h1 class="text-lg font-semibold text-slate-900">
+            Operasi Matriks Interaktif
+          </h1>
+          <p class="text-sm text-indigo-600 font-medium">
+            Bersama Bu Wahyu
+          </p>
+        </div>
+      </a>
+
+      <a href="#materi-inti"
+        class="rounded-full bg-slate-900 px-4 py-2 text-sm font-semibold text-white transition hover:bg-slate-800">
+        Mulai Belajar
+      </a>
+    </div>
+  </header>
+
+  <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+    <div class="grid gap-6 lg:grid-cols-[300px_minmax(0,1fr)]">
+      <aside class="lg:sticky lg:top-24 lg:self-start">
+        <div class="rounded-[28px] border border-slate-200 bg-white p-5 shadow-card">
+          <p class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">Daftar Materi</p>
+          <nav class="mt-4 grid gap-2 text-sm">
+            <a class="sidebar-link" href="#intro">1. Pendahuluan Matriks</a>
+            <a class="sidebar-link" href="#penjumlahan">2. Penjumlahan Matriks</a>
+            <a class="sidebar-link" href="#pengurangan">3. Pengurangan Matriks</a>
+            <a class="sidebar-link" href="#perkalian">4. Perkalian Matriks</a>
+            <a class="sidebar-link" href="#determinan">5. Determinan Ordo 2 dan 3</a>
+            <a class="sidebar-link" href="#invers">6. Invers Matriks 2 × 2</a>
+            <a class="sidebar-link" href="#latihan">7. Latihan Interaktif</a>
+            <a class="sidebar-link" href="#kuis">8. Kuis Ringkas</a>
+          </nav>
+
+          <div class="mt-6 rounded-2xl bg-slate-50 p-4 ring-1 ring-slate-200">
+            <p class="text-sm font-semibold text-slate-900">Pola Belajar</p>
+            <p class="mt-2 text-sm leading-7 text-slate-600">
+              Setiap bab disusun dengan urutan: konsep, rumus, contoh, visual, lalu latihan. Susunan ini dibuat seperti
+              ebook agar siswa dapat mengikuti materi secara runtut.
+            </p>
+          </div>
+        </div>
+      </aside>
+
+      <main class="space-y-8">
+        
+
+        <section id="materi-inti" class="rounded-[32px] border border-slate-200 bg-white p-6 shadow-card sm:p-8">
+          <div class="section-head">
+            <p class="section-eyebrow">Pengantar</p>
+            <h2 class="section-title">Materi dibuat lebih dekat dengan cara guru menjelaskan di kelas</h2>
+            <p class="section-desc">
+              Siswa biasanya lebih mudah memahami matriks ketika bentuk penyajiannya mirip dengan yang mereka lihat di
+              buku atau saat guru menulis di papan. Karena itu, pada versi ini bentuk matriks ditampilkan dengan kurung
+              matriks, notasi menggunakan huruf kapital, dan langkah-langkah visual ditempatkan tepat setelah penjelasan
+              konsepnya.
+            </p>
+          </div>
+        </section>
+
+        <section id="intro" class="chapter-card">
+          <div class="chapter-head">
+            <p class="chapter-number">Bab 1</p>
+            <h2 class="chapter-title">Pendahuluan Matriks</h2>
+          </div>
+
+          <h3 class="sub-title">Konsep</h3>
+          <p class="body-text">
+            Matriks adalah susunan elemen yang diatur menurut baris dan kolom. Elemen dalam matriks bisa berupa bilangan
+            bulat, pecahan, atau bentuk lain yang dipelajari sesuai tingkat materi. Pada kelas XI SMA, yang paling sering
+            digunakan adalah matriks bilangan real.
+          </p>
+          <p class="body-text">
+            Jika ditulis A = [aᵢⱼ], maka aᵢⱼ menunjukkan elemen pada baris ke-i dan kolom ke-j. Posisi ini sangat
+            penting, sebab operasi matriks selalu memperhatikan letak elemen.
+          </p>
+
+          <h3 class="sub-title">Contoh-contoh</h3>
+          <div class="example-grid examples-4">
+            <div class="matrix-card">
+              <p class="matrix-label">Contoh 1: A berordo 2 × 2</p>
+              <div class="matrix-bracket" data-matrix='[[1,2],[3,4]]'></div>
+            </div>
+            <div class="matrix-card">
+              <p class="matrix-label">Contoh 2: B berordo 2 × 3</p>
+              <div class="matrix-bracket" data-matrix='[[2,0,1],[5,3,4]]'></div>
+            </div>
+            <div class="matrix-card">
+              <p class="matrix-label">Contoh 3: Matriks Nol</p>
+              <div class="matrix-bracket" data-matrix='[[0,0],[0,0]]'></div>
+            </div>
+            <div class="matrix-card">
+              <p class="matrix-label">Contoh 4: Matriks Identitas I</p>
+              <div class="matrix-bracket" data-matrix='[[1,0],[0,1]]'></div>
+            </div>
+          </div>
+        </section>
+
+        <section id="penjumlahan" class="chapter-card">
+          <div class="chapter-head">
+            <p class="chapter-number">Bab 2</p>
+            <h2 class="chapter-title">Penjumlahan Matriks</h2>
+          </div>
+
+          <h3 class="sub-title">Konsep</h3>
+          <div class="box-konsep">
+            Penjumlahan matriks dilakukan dengan menjumlahkan elemen-elemen yang seletak. Dengan kata lain, elemen pada
+            posisi yang sama di dalam dua matriks dijumlahkan satu sama lain.
+          </div>
+
+          <h3 class="sub-title">Rumus</h3>
+          <div class="box-rumus">
+            Jika A = [aᵢⱼ] dan B = [bᵢⱼ], maka A + B = [aᵢⱼ + bᵢⱼ], dengan syarat ordo A = ordo B.
+          </div>
+
+          <h3 class="sub-title">Contoh-contoh</h3>
+          <div class="example-stack">
+            <div class="triple-example">
+              <div class="matrix-card">
+                <p class="matrix-label">Contoh 1: A</p>
+                <div class="matrix-bracket" data-matrix='[[1,2],[3,4]]'></div>
+              </div>
+              <div class="matrix-card">
+                <p class="matrix-label">Contoh 1: B</p>
+                <div class="matrix-bracket" data-matrix='[[5,6],[7,8]]'></div>
+              </div>
+              <div class="matrix-card">
+                <p class="matrix-label">A + B</p>
+                <div class="matrix-bracket" data-matrix='[[6,8],[10,12]]'></div>
+              </div>
+            </div>
+
+            <div class="triple-example">
+              <div class="matrix-card">
+                <p class="matrix-label">Contoh 2: A</p>
+                <div class="matrix-bracket" data-matrix='[[2,1,3],[4,0,5]]'></div>
+              </div>
+              <div class="matrix-card">
+                <p class="matrix-label">Contoh 2: B</p>
+                <div class="matrix-bracket" data-matrix='[[1,2,0],[3,6,2]]'></div>
+              </div>
+              <div class="matrix-card">
+                <p class="matrix-label">A + B</p>
+                <div class="matrix-bracket" data-matrix='[[3,3,3],[7,6,7]]'></div>
+              </div>
+            </div>
+
+            <div class="triple-example">
+              <div class="matrix-card">
+                <p class="matrix-label">Contoh 3: A</p>
+                <div class="matrix-bracket" data-matrix='[[0,4],[-2,7]]'></div>
+              </div>
+              <div class="matrix-card">
+                <p class="matrix-label">Contoh 3: B</p>
+                <div class="matrix-bracket" data-matrix='[[5,-1],[6,3]]'></div>
+              </div>
+              <div class="matrix-card">
+                <p class="matrix-label">A + B</p>
+                <div class="matrix-bracket" data-matrix='[[5,3],[4,10]]'></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="box-ingat">
+            Ingat: Penjumlahan matriks hanya bisa dilakukan jika kedua matriks memiliki ordo yang sama.
+          </div>
+        </section>
+
+        <section id="pengurangan" class="chapter-card">
+          <div class="chapter-head">
+            <p class="chapter-number">Bab 3</p>
+            <h2 class="chapter-title">Pengurangan Matriks</h2>
+          </div>
+
+          <h3 class="sub-title">Konsep</h3>
+          <div class="box-konsep">
+            Pengurangan matriks dilakukan pada elemen-elemen yang seletak. Walaupun mirip dengan penjumlahan, siswa
+            perlu lebih teliti karena tanda negatif sering menimbulkan kesalahan.
+          </div>
+
+          <h3 class="sub-title">Rumus</h3>
+          <div class="box-rumus">
+            Jika A = [aᵢⱼ] dan B = [bᵢⱼ], maka A − B = [aᵢⱼ − bᵢⱼ], dengan syarat ordo A = ordo B.
+          </div>
+
+          <h3 class="sub-title">Contoh-contoh</h3>
+          <div class="example-stack">
+            <div class="triple-example">
+              <div class="matrix-card">
+                <p class="matrix-label">Contoh 1: A</p>
+                <div class="matrix-bracket" data-matrix='[[9,7],[5,3]]'></div>
+              </div>
+              <div class="matrix-card">
+                <p class="matrix-label">Contoh 1: B</p>
+                <div class="matrix-bracket" data-matrix='[[4,2],[1,6]]'></div>
+              </div>
+              <div class="matrix-card">
+                <p class="matrix-label">A − B</p>
+                <div class="matrix-bracket" data-matrix='[[5,5],[4,-3]]'></div>
+              </div>
+            </div>
+
+            <div class="triple-example">
+              <div class="matrix-card">
+                <p class="matrix-label">Contoh 2: A</p>
+                <div class="matrix-bracket" data-matrix='[[6,1,8],[2,9,4]]'></div>
+              </div>
+              <div class="matrix-card">
+                <p class="matrix-label">Contoh 2: B</p>
+                <div class="matrix-bracket" data-matrix='[[3,0,5],[7,1,2]]'></div>
+              </div>
+              <div class="matrix-card">
+                <p class="matrix-label">A − B</p>
+                <div class="matrix-bracket" data-matrix='[[3,1,3],[-5,8,2]]'></div>
+              </div>
+            </div>
+
+            <div class="triple-example">
+              <div class="matrix-card">
+                <p class="matrix-label">Contoh 3: A</p>
+                <div class="matrix-bracket" data-matrix='[[2,-3],[4,1]]'></div>
+              </div>
+              <div class="matrix-card">
+                <p class="matrix-label">Contoh 3: B</p>
+                <div class="matrix-bracket" data-matrix='[[-1,5],[2,-6]]'></div>
+              </div>
+              <div class="matrix-card">
+                <p class="matrix-label">A − B</p>
+                <div class="matrix-bracket" data-matrix='[[3,-8],[2,7]]'></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="box-ingat">
+            Ingat: A − B umumnya tidak sama dengan B − A.
+          </div>
+        </section>
+
+        <section id="perkalian" class="chapter-card">
+          <div class="chapter-head">
+            <p class="chapter-number">Bab 4</p>
+            <h2 class="chapter-title">Perkalian Matriks</h2>
+          </div>
+
+          <h3 class="sub-title">Konsep</h3>
+          <div class="box-konsep">
+            Perkalian matriks dilakukan dengan mencocokkan satu baris dari matriks pertama dengan satu kolom dari
+            matriks kedua. Pasangan elemen pada baris dan kolom tersebut dikalikan, kemudian hasilnya dijumlahkan.
+          </div>
+
+          <h3 class="sub-title">Rumus dan Syarat</h3>
+          <div class="box-rumus">
+            Jika A berordo m × n dan B berordo n × p, maka A × B dapat dilakukan dan hasilnya berordo m × p.
+          </div>
+
+          <h3 class="sub-title">Contoh-contoh</h3>
+          <div class="example-stack">
+            <div class="triple-example">
+              <div class="matrix-card">
+                <p class="matrix-label">Contoh 1: A</p>
+                <div class="matrix-bracket" data-matrix='[[1,2,3],[4,5,6]]'></div>
+              </div>
+              <div class="matrix-card">
+                <p class="matrix-label">Contoh 1: B</p>
+                <div class="matrix-bracket" data-matrix='[[1,2],[3,4],[5,6]]'></div>
+              </div>
+              <div class="matrix-card">
+                <p class="matrix-label">A × B</p>
+                <div class="matrix-bracket" data-matrix='[[22,28],[49,64]]'></div>
+              </div>
+            </div>
+
+            <div class="triple-example">
+              <div class="matrix-card">
+                <p class="matrix-label">Contoh 2: A</p>
+                <div class="matrix-bracket" data-matrix='[[2,1],[3,4]]'></div>
+              </div>
+              <div class="matrix-card">
+                <p class="matrix-label">Contoh 2: B</p>
+                <div class="matrix-bracket" data-matrix='[[5,2],[1,3]]'></div>
+              </div>
+              <div class="matrix-card">
+                <p class="matrix-label">A × B</p>
+                <div class="matrix-bracket" data-matrix='[[11,7],[19,18]]'></div>
+              </div>
+            </div>
+
+            <div class="triple-example">
+              <div class="matrix-card">
+                <p class="matrix-label">Contoh 3: A</p>
+                <div class="matrix-bracket" data-matrix='[[1,0],[2,1],[3,4]]'></div>
+              </div>
+              <div class="matrix-card">
+                <p class="matrix-label">Contoh 3: B</p>
+                <div class="matrix-bracket" data-matrix='[[2,1,3],[5,0,4]]'></div>
+              </div>
+              <div class="matrix-card">
+                <p class="matrix-label">A × B</p>
+                <div class="matrix-bracket" data-matrix='[[2,1,3],[9,2,10],[26,3,25]]'></div>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="sub-title">Visual Langkah dengan Animasi</h3>
+          <p class="body-text">
+            Untuk mencari elemen pertama hasil, ambil baris pertama A dan kolom pertama B. Lalu kalikan elemen-elemen
+            yang bersesuaian dan jumlahkan.
+          </p>
+
+          <div class="visual-stage">
+            <div class="visual-panel">
+              <p class="visual-title">Baris pertama dari A</p>
+              <div id="animatedRow" class="vector-row">[ 1, 2, 3 ]</div>
+            </div>
+            <div class="visual-panel">
+              <p class="visual-title">Kolom pertama dari B</p>
+              <div id="animatedCol" class="vector-col">[ 1, 3, 5 ]</div>
+            </div>
+          </div>
+
+          <div class="step-timeline">
+            <div id="step1" class="step-chip active">1. Ambil baris pertama A</div>
+            <div id="step2" class="step-chip">2. Ambil kolom pertama B</div>
+            <div id="step3" class="step-chip">3. Kalikan per pasangan</div>
+            <div id="step4" class="step-chip">4. Jumlahkan hasil</div>
+          </div>
+
+          <div class="animated-calc-box">
+            <p class="animated-calc-title">Perhitungan elemen pertama hasil</p>
+            <p id="animatedCalc" class="animated-calc-text">c₁₁ = (1 × 1) + (2 × 3) + (3 × 5) = 22</p>
+            <button id="btnAnimate" class="secondary-btn mt-4">Putar Animasi Lagi</button>
+          </div>
+
+          <h3 class="sub-title">Coba Sendiri</h3>
+          <div class="tool-grid">
+            <div>
+              <label for="matrixA" class="input-label">Matriks A</label>
+              <textarea id="matrixA" class="matrix-input" rows="6">1 2 3
+4 5 6</textarea>
+            </div>
+            <div>
+              <label for="matrixB" class="input-label">Matriks B</label>
+              <textarea id="matrixB" class="matrix-input" rows="6">1 2
+3 4
+5 6</textarea>
+            </div>
+          </div>
+
+          <div class="mt-5 flex flex-col gap-3 sm:flex-row">
+            <button id="btnMultiply" class="primary-btn">Hitung Perkalian</button>
+            <button id="btnSampleMultiply1" class="secondary-btn">Contoh 1</button>
+            <button id="btnSampleMultiply2" class="secondary-btn">Contoh 2</button>
+            <button id="btnSampleMultiply3" class="secondary-btn">Contoh 3</button>
+          </div>
+
+          <div class="result-card">
+            <div>
+              <p class="result-label">Hasil A × B</p>
+              <div id="resultMatrix" class="matrix-result-text">Belum dihitung</div>
+            </div>
+            <div class="result-explain">
+              <p class="result-label">Penjelasan</p>
+              <p id="multiplyExplanation" class="body-text compact">
+                Tekan tombol hitung untuk melihat hasil perkalian matriks beserta penjelasannya.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="determinan" class="chapter-card">
+          <div class="chapter-head">
+            <p class="chapter-number">Bab 5</p>
+            <h2 class="chapter-title">Determinan Matriks Ordo 2 dan Ordo 3</h2>
+          </div>
+
+          <h3 class="sub-title">Determinan Matriks 2 × 2</h3>
+          <div class="box-konsep">
+            Untuk matriks 2 × 2, determinan dihitung dengan rumus ad − bc. Rumus ini penting karena nantinya digunakan
+            untuk memeriksa apakah sebuah matriks 2 × 2 memiliki invers atau tidak.
+          </div>
+
+          <div class="box-rumus">
+            Jika A = [ [a, b], [c, d] ], maka det A = ad − bc.
+          </div>
+
+          <h3 class="sub-title">Determinan Matriks 3 × 3 dengan Metode Sarrus</h3>
+          <div class="box-konsep">
+            Untuk matriks 3 × 3, salah satu cara yang sering diajarkan di SMA adalah metode Sarrus. Intinya, dua kolom
+            pertama disalin ke kanan, lalu hasil perkalian diagonal turun dijumlahkan dan hasil perkalian diagonal naik
+            dikurangkan.
+          </div>
+
+          <div class="sarrus-card">
+            <div class="sarrus-layout">
+              <div class="sarrus-label">A =</div>
+
+              <div class="sarrus-main">
+                <div class="sarrus-block left">
+                  <div class="sarrus-bracket">
+                    <div class="sarrus-grid" id="sarrusLeft"></div>
+                    <svg class="sarrus-lines" viewBox="0 0 180 108" preserveAspectRatio="none">
+                      <line x1="14" y1="12" x2="122" y2="96" class="diag-blue" />
+                      <line x1="50" y1="12" x2="158" y2="96" class="diag-blue" />
+                      <line x1="86" y1="12" x2="194" y2="96" class="diag-blue off" />
+                      <line x1="14" y1="96" x2="122" y2="12" class="diag-orange" />
+                      <line x1="50" y1="96" x2="158" y2="12" class="diag-orange" />
+                      <line x1="86" y1="96" x2="194" y2="12" class="diag-orange off" />
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="sarrus-block right">
+                  <div class="sarrus-grid" id="sarrusRight"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="sarrus-formula">
+              <p id="sarrusFormula1">det A = 4 · 1 · 4 + 2 · 5 · 3 + 8 · 2 · 2 − 8 · 1 · 3 − 4 · 5 · 2 − 2 · 2 · 4</p>
+              <p id="sarrusFormula2">det A = 16 + 30 + 32 − 24 − 40 − 16 = −2</p>
+            </div>
+
+            <div class="det-result">
+              det A = −2
+            </div>
+          </div>
+
+          <div class="example-grid examples-4">
+            <div class="formula-card">
+              <p class="matrix-label">Contoh 1: Ordo 2</p>
+              <div class="matrix-bracket" data-matrix='[[1,2],[3,4]]'></div>
+              <p class="formula-text">det A = (1×4) − (2×3) = −2</p>
+            </div>
+            <div class="formula-card">
+              <p class="matrix-label">Contoh 2: Ordo 2</p>
+              <div class="matrix-bracket" data-matrix='[[4,7],[2,6]]'></div>
+              <p class="formula-text">det A = (4×6) − (7×2) = 10</p>
+            </div>
+            <div class="formula-card">
+              <p class="matrix-label">Contoh 3: Ordo 3</p>
+              <div class="matrix-bracket" data-matrix='[[4,2,8],[2,1,5],[3,2,4]]'></div>
+              <p class="formula-text">Dengan metode Sarrus diperoleh det A = −2.</p>
+            </div>
+            <div class="formula-card">
+              <p class="matrix-label">Contoh 4: Ordo 3</p>
+              <div class="matrix-bracket" data-matrix='[[1,2,3],[0,1,4],[5,6,0]]'></div>
+              <p class="formula-text">Dengan metode Sarrus diperoleh det A = 1.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="invers" class="chapter-card">
+          <div class="chapter-head">
+            <p class="chapter-number">Bab 6</p>
+            <h2 class="chapter-title">Invers Matriks 2 × 2</h2>
+          </div>
+
+          <h3 class="sub-title">Konsep</h3>
+          <div class="box-konsep">
+            Invers matriks adalah matriks yang jika dikalikan dengan matriks asal menghasilkan matriks identitas. Pada
+            kelas XI SMA, invers yang paling sering dipelajari adalah invers matriks 2 × 2.
+          </div>
+
+          <h3 class="sub-title">Rumus</h3>
+          <div class="box-rumus">
+            Jika A = [ [a, b], [c, d] ], maka A⁻¹ = 1 / (ad − bc) × [ [d, −b], [−c, a] ], dengan syarat det A ≠ 0.
+          </div>
+
+          <h3 class="sub-title">Visual langkah seperti pembahasan di kelas</h3>
+          <div class="inverse-demo-card">
+            <p class="inverse-question">Tentukan invers dari matriks berikut.</p>
+
+            <div class="inverse-question-matrix">
+              <span class="inverse-var">A =</span>
+              <div class="matrix-bracket inline" data-matrix='[[4,1],[7,2]]'></div>
+            </div>
+
+            <h4 class="inverse-heading">Pembahasan:</h4>
+
+            <div class="inverse-steps-line">
+              <span class="inverse-formula-frac">1 / ((4 · 2) − (1 · 7))</span>
+              <span class="inverse-times">×</span>
+
+              <div class="inverse-cross-card">
+                <div class="matrix-bracket inverse-target" data-matrix='[[2,-1],[-7,4]]'></div>
+                <svg class="inverse-cross-lines" viewBox="0 0 120 96" preserveAspectRatio="none">
+                  <line x1="12" y1="12" x2="108" y2="84" class="diag-blue" />
+                  <line x1="12" y1="84" x2="108" y2="12" class="diag-orange" />
+                </svg>
+              </div>
+
+              <span class="inverse-equals">=</span>
+              <span class="inverse-formula-frac">1 / (8 − 7)</span>
+              <span class="inverse-times">×</span>
+              <div class="matrix-bracket inline" data-matrix='[[2,-1],[-7,4]]'></div>
+              <span class="inverse-equals">=</span>
+              <div class="matrix-bracket inline" data-matrix='[[2,-1],[-7,4]]'></div>
+            </div>
+
+            <div class="inverse-note">
+              <strong>Makna visual:</strong> angka diagonal utama 4 dan 2 ditukar tempat, sedangkan angka di luar
+              diagonal 1 dan 7 berubah tanda menjadi −1 dan −7.
+            </div>
+          </div>
+
+          <h3 class="sub-title">Contoh-contoh</h3>
+          <div class="example-grid examples-3">
+            <div class="formula-card">
+              <p class="matrix-label">Contoh 1</p>
+              <div class="matrix-bracket" data-matrix='[[1,2],[3,4]]'></div>
+              <p class="formula-text">det A = −2, maka A⁻¹ diperoleh dari [ [4, −2], [−3, 1] ] dibagi −2.</p>
+            </div>
+            <div class="formula-card">
+              <p class="matrix-label">Contoh 2</p>
+              <div class="matrix-bracket" data-matrix='[[2,1],[5,3]]'></div>
+              <p class="formula-text">det A = 1, sehingga A⁻¹ = [ [3, −1], [−5, 2] ].</p>
+            </div>
+            <div class="formula-card">
+              <p class="matrix-label">Contoh 3</p>
+              <div class="matrix-bracket" data-matrix='[[4,7],[2,6]]'></div>
+              <p class="formula-text">det A = 10, sehingga A⁻¹ = 1/10 × [ [6, −7], [−2, 4] ].</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="latihan" class="chapter-card">
+          <div class="chapter-head">
+            <p class="chapter-number">Bab 7</p>
+            <h2 class="chapter-title">Latihan Interaktif</h2>
+          </div>
+
+          <p class="body-text">
+            Gunakan pertanyaan berikut untuk menguji apakah aturan-aturan dasar operasi matriks sudah benar-benar
+            dipahami.
+          </p>
+
+          <div class="exercise-list">
+            <div class="exercise-item">
+              <span class="exercise-num">1</span>
+              <p>Jelaskan mengapa A berordo 2 × 3 dan B berordo 2 × 2 tidak dapat dijumlahkan.</p>
+            </div>
+            <div class="exercise-item">
+              <span class="exercise-num">2</span>
+              <p>Tentukan ukuran hasil dari perkalian A berordo 3 × 2 dengan B berordo 2 × 4.</p>
+            </div>
+            <div class="exercise-item">
+              <span class="exercise-num">3</span>
+              <p>Jelaskan dengan kata-kata sendiri bagaimana metode Sarrus bekerja pada determinan 3 × 3.</p>
+            </div>
+            <div class="exercise-item">
+              <span class="exercise-num">4</span>
+              <p>Mengapa matriks 2 × 2 dengan det A = 0 tidak memiliki invers?</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="kuis" class="chapter-card">
+          <div class="chapter-head">
+            <p class="chapter-number">Bab 8</p>
+            <h2 class="chapter-title">Kuis Ringkas</h2>
+          </div>
+
+          <div class="quiz-grid">
+            <article class="quiz-card">
+              <p class="quiz-number">Soal 1</p>
+              <h3 class="quiz-title">Dua matriks dapat dijumlahkan jika ...</h3>
+              <label class="quiz-option"><input type="radio" name="q1" value="a"> jumlah elemennya sama</label>
+              <label class="quiz-option"><input type="radio" name="q1" value="b"> ordonya sama</label>
+              <label class="quiz-option"><input type="radio" name="q1" value="c"> keduanya matriks identitas</label>
+            </article>
+
+            <article class="quiz-card">
+              <p class="quiz-number">Soal 2</p>
+              <h3 class="quiz-title">A × B dapat dilakukan jika ...</h3>
+              <label class="quiz-option"><input type="radio" name="q2" value="a"> banyak baris A = banyak kolom B</label>
+              <label class="quiz-option"><input type="radio" name="q2" value="b"> banyak kolom A = banyak baris B</label>
+              <label class="quiz-option"><input type="radio" name="q2" value="c"> ordo A = ordo B</label>
+            </article>
+
+            <article class="quiz-card">
+              <p class="quiz-number">Soal 3</p>
+              <h3 class="quiz-title">Metode Sarrus digunakan untuk ...</h3>
+              <label class="quiz-option"><input type="radio" name="q3" value="a"> mencari jumlah semua elemen matriks</label>
+              <label class="quiz-option"><input type="radio" name="q3" value="b"> menentukan determinan matriks 3 × 3</label>
+              <label class="quiz-option"><input type="radio" name="q3" value="c"> mengubah matriks menjadi identitas</label>
+            </article>
+
+            <article class="quiz-card">
+              <p class="quiz-number">Soal 4</p>
+              <h3 class="quiz-title">Matriks 2 × 2 tidak memiliki invers jika ...</h3>
+              <label class="quiz-option"><input type="radio" name="q4" value="a"> determinannya nol</label>
+              <label class="quiz-option"><input type="radio" name="q4" value="b"> diagonal utamanya sama</label>
+              <label class="quiz-option"><input type="radio" name="q4" value="c"> semua elemennya positif</label>
+            </article>
+          </div>
+
+          <div class="mt-6 flex flex-col gap-3 sm:flex-row">
+            <button id="btnCheckQuiz" class="primary-btn">Periksa Jawaban</button>
+            <button id="btnResetQuiz" class="secondary-btn">Reset</button>
+          </div>
+
+          <div class="result-card mt-5">
+            <div class="result-explain full">
+              <p class="result-label">Hasil Kuis</p>
+              <p id="quizResult" class="body-text compact">Belum diperiksa.</p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <footer class="border-t border-slate-200 bg-white">
+    <div class="mx-auto max-w-7xl px-4 py-6 text-center text-sm text-slate-500 sm:px-6 lg:px-8">
+      Media belajar operasi matriks untuk siswa kelas XI SMA — versi v6
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
