@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Operasi Matriks Kelas XI SMA — V6</title>
+  <title>Operasi Matriks Kelas XI SMA — V7</title>
   <meta name="description"
-    content="Media belajar operasi matriks untuk kelas XI SMA dengan alur seperti ebook, contoh beragam, determinan ordo 3, invers 2x2 visual, latihan, dan kuis." />
+    content="Media belajar operasi matriks untuk kelas XI SMA dengan alur seperti ebook, jenis-jenis matriks, transpose, operasi hitung, determinan, invers, latihan, dan kuis." />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -35,8 +35,8 @@
 <body class="bg-slate-50 text-slate-800">
   <header class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur">
     <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-      <a href="#hero" class="flex items-center gap-3">
-        <img src="img/bu-wahyu.jpg" alt="Foto Bu Wahyu" class="w-12 h-12 object-contain rounded-full">
+      <a href="#materi-inti" class="flex items-center gap-3">
+        <img src="img/bu-wahyu.jpg" alt="Foto Bu Wahyu" class="w-12 h-12 object-cover rounded-full">
 
         <div>
           <h1 class="text-lg font-semibold text-slate-900">
@@ -62,14 +62,16 @@
           <p class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">Daftar Materi</p>
           <nav class="mt-4 grid gap-2 text-sm">
             <a class="sidebar-link" href="#intro">1. Pendahuluan Matriks</a>
-            <a class="sidebar-link" href="#penjumlahan">2. Penjumlahan Matriks</a>
-            <a class="sidebar-link" href="#pengurangan">3. Pengurangan Matriks</a>
-            <a class="sidebar-link" href="#skalar">4. Perkalian Skalar dengan Matriks</a>
-            <a class="sidebar-link" href="#perkalian">5. Perkalian Matriks</a>
-            <a class="sidebar-link" href="#determinan">6. Determinan Ordo 2 dan 3</a>
-            <a class="sidebar-link" href="#invers">7. Invers Matriks 2 × 2</a>
-            <a class="sidebar-link" href="#latihan">8. Latihan Interaktif</a>
-            <a class="sidebar-link" href="#kuis">9. Kuis Ringkas</a>
+            <a class="sidebar-link" href="#jenis">2. Jenis-Jenis Matriks</a>
+            <a class="sidebar-link" href="#transpose">3. Transpose Matriks</a>
+            <a class="sidebar-link" href="#penjumlahan">4. Penjumlahan Matriks</a>
+            <a class="sidebar-link" href="#pengurangan">5. Pengurangan Matriks</a>
+            <a class="sidebar-link" href="#skalar">6. Perkalian Skalar dengan Matriks</a>
+            <a class="sidebar-link" href="#perkalian">7. Perkalian Matriks</a>
+            <a class="sidebar-link" href="#determinan">8. Determinan Ordo 2 dan 3</a>
+            <a class="sidebar-link" href="#invers">9. Invers Matriks 2 × 2</a>
+            <a class="sidebar-link" href="#latihan">10. Latihan Interaktif</a>
+            <a class="sidebar-link" href="#kuis">11. Kuis Ringkas</a>
           </nav>
 
           <div class="mt-6 rounded-2xl bg-slate-50 p-4 ring-1 ring-slate-200">
@@ -83,30 +85,28 @@
       </aside>
 
       <main class="space-y-8">
-        
-
         <section id="materi-inti" class="rounded-[32px] border border-slate-200 bg-white p-6 shadow-card sm:p-8">
-  <div class="section-head">
-    <p class="section-eyebrow">Pengantar</p>
-    <h2 class="section-title">Manfaat belajar matriks dalam kehidupan</h2>
-    <p class="section-desc">
-      Matriks tidak hanya dipelajari untuk menjawab soal matematika di kelas, tetapi juga berguna dalam banyak bidang
-      kehidupan. Konsep matriks dipakai untuk mengatur data, menyusun informasi dalam bentuk tabel, dan membantu
-      perhitungan yang melibatkan banyak nilai sekaligus.
-    </p>
-    <p class="section-desc">
-      Dalam kehidupan sehari-hari, matriks dapat dikaitkan dengan pengolahan nilai siswa, jadwal pelajaran, data
-      penjualan, data keuangan, hingga pengaturan tempat duduk atau susunan barang. Dalam bidang teknologi, konsep
-      matriks juga digunakan pada komputer, pengolahan gambar, permainan digital, kecerdasan buatan, dan berbagai
-      aplikasi sains.
-    </p>
-    <p class="section-desc">
-      Dengan belajar matriks, siswa dilatih untuk berpikir teratur, teliti, dan sistematis. Karena itu, materi ini
-      penting bukan hanya untuk pelajaran matematika, tetapi juga untuk melatih cara berpikir logis dalam memecahkan
-      masalah.
-    </p>
-  </div>
-</section>
+          <div class="section-head">
+            <p class="section-eyebrow">Pengantar</p>
+            <h2 class="section-title">Manfaat belajar matriks dalam kehidupan</h2>
+            <p class="section-desc">
+              Matriks tidak hanya dipelajari untuk menjawab soal matematika di kelas, tetapi juga berguna dalam banyak
+              bidang kehidupan. Konsep matriks dipakai untuk mengatur data, menyusun informasi dalam bentuk tabel,
+              dan membantu perhitungan yang melibatkan banyak nilai sekaligus.
+            </p>
+            <p class="section-desc">
+              Dalam kehidupan sehari-hari, matriks dapat dikaitkan dengan pengolahan nilai siswa, jadwal pelajaran,
+              data penjualan, data keuangan, hingga pengaturan tempat duduk atau susunan barang. Dalam bidang teknologi,
+              konsep matriks juga digunakan pada komputer, pengolahan gambar, permainan digital, kecerdasan buatan,
+              dan berbagai aplikasi sains.
+            </p>
+            <p class="section-desc">
+              Dengan belajar matriks, siswa dilatih untuk berpikir teratur, teliti, dan sistematis. Karena itu, materi
+              ini penting bukan hanya untuk pelajaran matematika, tetapi juga untuk melatih cara berpikir logis dalam
+              memecahkan masalah.
+            </p>
+          </div>
+        </section>
 
         <section id="intro" class="chapter-card">
           <div class="chapter-head">
@@ -117,7 +117,8 @@
           <h3 class="sub-title">Konsep</h3>
           <p class="body-text">
             Matriks adalah susunan elemen yang diatur menurut baris dan kolom. Elemen dalam matriks bisa berupa bilangan
-            bulat, pecahan, atau bentuk lain yang dipelajari sesuai tingkat materi. Pada kelas XI SMA, yang paling sering
+            bulat, pecahan, atau bentuk lain yang dipelajari sesuai tingkat materi. Pada kelas XI SMA, yang paling
+            sering
             digunakan adalah matriks bilangan real.
           </p>
           <p class="body-text">
@@ -146,9 +147,149 @@
           </div>
         </section>
 
-        <section id="penjumlahan" class="chapter-card">
+
+        <section id="jenis" class="chapter-card">
           <div class="chapter-head">
             <p class="chapter-number">Bab 2</p>
+            <h2 class="chapter-title">Jenis-Jenis Matriks</h2>
+          </div>
+
+          <p class="body-text">
+            Matriks dapat dibedakan berdasarkan bentuk dan letak elemen-elemennya. Dengan mengenal jenis matriks,
+            siswa akan lebih mudah memahami operasi-operasi matriks pada bab berikutnya.
+          </p>
+
+          <div class="example-stack mt-4">
+            <div class="formula-card">
+              <p class="matrix-label">1. Matriks Baris</p>
+              <p class="formula-text">Matriks baris adalah matriks yang hanya memiliki satu baris.</p>
+              <div class="matrix-bracket" data-matrix='[[2,4,6]]'></div>
+              <p class="formula-text">Contoh: A = [ 2 4 6 ] berordo 1 × 3.</p>
+            </div>
+
+            <div class="formula-card">
+              <p class="matrix-label">2. Matriks Kolom</p>
+              <p class="formula-text">Matriks kolom adalah matriks yang hanya memiliki satu kolom.</p>
+              <div class="matrix-bracket" data-matrix='[[3],[5],[7]]'></div>
+              <p class="formula-text">Contoh: B berordo 3 × 1.</p>
+            </div>
+
+            <div class="formula-card">
+              <p class="matrix-label">3. Matriks Diagonal</p>
+              <p class="formula-text">Matriks diagonal adalah matriks persegi yang elemen di luar diagonal utamanya
+                bernilai 0.</p>
+              <div class="matrix-bracket" data-matrix='[[4,0,0],[0,2,0],[0,0,9]]'></div>
+              <p class="formula-text">Contoh: hanya elemen diagonal utama yang tidak nol.</p>
+            </div>
+
+            <div class="formula-card">
+              <p class="matrix-label">4. Matriks Segitiga Bawah</p>
+              <p class="formula-text">Matriks segitiga bawah adalah matriks persegi yang semua elemen di atas diagonal
+                utama bernilai 0.</p>
+              <div class="matrix-bracket" data-matrix='[[5,0,0],[2,3,0],[1,4,6]]'></div>
+              <p class="formula-text">Contoh: bagian atas diagonal utama semuanya nol.</p>
+            </div>
+
+            <div class="formula-card">
+              <p class="matrix-label">5. Matriks Segitiga Atas</p>
+              <p class="formula-text">Matriks segitiga atas adalah matriks persegi yang semua elemen di bawah diagonal
+                utama bernilai 0.</p>
+              <div class="matrix-bracket" data-matrix='[[7,2,1],[0,4,5],[0,0,8]]'></div>
+              <p class="formula-text">Contoh: bagian bawah diagonal utama semuanya nol.</p>
+            </div>
+          </div>
+
+          <div class="box-ingat">
+            Ingat: matriks diagonal, segitiga bawah, dan segitiga atas semuanya termasuk matriks persegi.
+          </div>
+        </section>
+
+        <section id="transpose" class="chapter-card">
+          <div class="chapter-head">
+            <p class="chapter-number">Bab 3</p>
+            <h2 class="chapter-title">Transpose Matriks</h2>
+          </div>
+
+          <h3 class="sub-title">Konsep</h3>
+          <div class="box-konsep">
+            Transpose matriks adalah matriks yang diperoleh dengan menukar posisi baris menjadi kolom dan kolom menjadi
+            baris.
+            Jika suatu elemen semula berada pada baris ke-i dan kolom ke-j, maka pada transpose-nya elemen itu akan
+            berada pada baris ke-j dan kolom ke-i.
+          </div>
+
+          <h3 class="sub-title">Rumus</h3>
+          <div class="box-rumus">
+            Jika A = [aᵢⱼ], maka transpose dari A ditulis Aᵀ dan didefinisikan sebagai Aᵀ = [aⱼᵢ].
+          </div>
+
+          <h3 class="sub-title">Penjelasan</h3>
+          <p class="body-text">
+            Transpose berguna untuk memahami perubahan susunan data pada matriks. Dengan transpose, kita bisa melihat
+            bagaimana data yang semula tersusun per baris menjadi tersusun per kolom. Materi ini penting karena nanti
+            sering muncul dalam operasi lain, misalnya ketika membandingkan A dengan Aᵀ.
+          </p>
+          <p class="body-text">
+            Untuk matriks persegi, transpose tetap memiliki ukuran yang sama. Namun untuk matriks yang tidak persegi,
+            ukuran transpose akan berubah. Misalnya, matriks 2 × 3 jika ditranspose akan menjadi 3 × 2.
+          </p>
+
+          <h3 class="sub-title">Contoh-contoh</h3>
+          <div class="example-stack">
+            <div class="triple-example">
+              <div class="matrix-card">
+                <p class="matrix-label">Contoh 1: A</p>
+                <div class="matrix-bracket" data-matrix='[[1,2],[3,4]]'></div>
+              </div>
+              <div class="matrix-card">
+                <p class="matrix-label">Transpose A</p>
+                <div class="matrix-bracket" data-matrix='[[1,3],[2,4]]'></div>
+              </div>
+              <div class="matrix-card">
+                <p class="matrix-label">Keterangan</p>
+                <p class="formula-text">Baris pertama A menjadi kolom pertama Aᵀ, dan seterusnya.</p>
+              </div>
+            </div>
+
+            <div class="triple-example">
+              <div class="matrix-card">
+                <p class="matrix-label">Contoh 2: B</p>
+                <div class="matrix-bracket" data-matrix='[[2,0,1],[5,3,4]]'></div>
+              </div>
+              <div class="matrix-card">
+                <p class="matrix-label">Transpose B</p>
+                <div class="matrix-bracket" data-matrix='[[2,5],[0,3],[1,4]]'></div>
+              </div>
+              <div class="matrix-card">
+                <p class="matrix-label">Keterangan</p>
+                <p class="formula-text">B berordo 2 × 3, maka Bᵀ berordo 3 × 2.</p>
+              </div>
+            </div>
+
+            <div class="triple-example">
+              <div class="matrix-card">
+                <p class="matrix-label">Contoh 3: C</p>
+                <div class="matrix-bracket" data-matrix='[[7],[2],[5]]'></div>
+              </div>
+              <div class="matrix-card">
+                <p class="matrix-label">Transpose C</p>
+                <div class="matrix-bracket" data-matrix='[[7,2,5]]'></div>
+              </div>
+              <div class="matrix-card">
+                <p class="matrix-label">Keterangan</p>
+                <p class="formula-text">Matriks kolom dapat berubah menjadi matriks baris.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="box-ingat">
+            Ingat: transpose dilakukan dengan menukar baris menjadi kolom dan kolom menjadi baris.
+          </div>
+        </section>
+
+        <section id="penjumlahan" class="chapter-card">
+          <div class="chapter-head">
+            <p class="chapter-number">Bab 4</p>
             <h2 class="chapter-title">Penjumlahan Matriks</h2>
           </div>
 
@@ -198,15 +339,15 @@
             <div class="triple-example">
               <div class="matrix-card">
                 <p class="matrix-label">Contoh 3: A</p>
-                <div class="matrix-bracket" data-matrix='[[0,4],[-2,7]]'></div>
+                <div class="matrix-bracket" data-matrix='[[1,2],[3,4]]'></div>
               </div>
               <div class="matrix-card">
-                <p class="matrix-label">Contoh 3: B</p>
-                <div class="matrix-bracket" data-matrix='[[5,-1],[6,3]]'></div>
+                <p class="matrix-label">Aᵀ</p>
+                <div class="matrix-bracket" data-matrix='[[1,3],[2,4]]'></div>
               </div>
               <div class="matrix-card">
-                <p class="matrix-label">A + B</p>
-                <div class="matrix-bracket" data-matrix='[[5,3],[4,10]]'></div>
+                <p class="matrix-label">A + Aᵀ</p>
+                <div class="matrix-bracket" data-matrix='[[2,5],[5,8]]'></div>
               </div>
             </div>
           </div>
@@ -218,7 +359,7 @@
 
         <section id="pengurangan" class="chapter-card">
           <div class="chapter-head">
-            <p class="chapter-number">Bab 3</p>
+            <p class="chapter-number">Bab 5</p>
             <h2 class="chapter-title">Pengurangan Matriks</h2>
           </div>
 
@@ -268,15 +409,15 @@
             <div class="triple-example">
               <div class="matrix-card">
                 <p class="matrix-label">Contoh 3: A</p>
-                <div class="matrix-bracket" data-matrix='[[2,-3],[4,1]]'></div>
+                <div class="matrix-bracket" data-matrix='[[1,2],[3,4]]'></div>
               </div>
               <div class="matrix-card">
-                <p class="matrix-label">Contoh 3: B</p>
-                <div class="matrix-bracket" data-matrix='[[-1,5],[2,-6]]'></div>
+                <p class="matrix-label">Aᵀ</p>
+                <div class="matrix-bracket" data-matrix='[[1,3],[2,4]]'></div>
               </div>
               <div class="matrix-card">
-                <p class="matrix-label">A − B</p>
-                <div class="matrix-bracket" data-matrix='[[3,-8],[2,7]]'></div>
+                <p class="matrix-label">A − Aᵀ</p>
+                <div class="matrix-bracket" data-matrix='[[0,-1],[1,0]]'></div>
               </div>
             </div>
           </div>
@@ -288,7 +429,7 @@
 
         <section id="skalar" class="chapter-card">
           <div class="chapter-head">
-            <p class="chapter-number">Bab 4</p>
+            <p class="chapter-number">Bab 6</p>
             <h2 class="chapter-title">Perkalian Skalar dengan Matriks</h2>
           </div>
 
@@ -354,17 +495,17 @@
 
             <div class="triple-example">
               <div class="matrix-card">
-                <p class="matrix-label">Contoh 3: A</p>
-                <div class="formula-text">−2 × A, dengan</div>
-                <div class="matrix-bracket" data-matrix='[[3,-1],[2,5]]'></div>
+                <p class="matrix-label">Contoh 3: Aᵀ</p>
+                <div class="formula-text">−2 × Aᵀ, dengan</div>
+                <div class="matrix-bracket" data-matrix='[[1,3],[2,4]]'></div>
               </div>
               <div class="matrix-card">
                 <p class="matrix-label">Proses</p>
-                <p class="formula-text">Semua elemen A dikali −2</p>
+                <p class="formula-text">Semua elemen Aᵀ dikali −2</p>
               </div>
               <div class="matrix-card">
                 <p class="matrix-label">Hasil</p>
-                <div class="matrix-bracket" data-matrix='[[-6,2],[-4,-10]]'></div>
+                <div class="matrix-bracket" data-matrix='[[-2,-6],[-4,-8]]'></div>
               </div>
             </div>
           </div>
@@ -376,7 +517,7 @@
 
         <section id="perkalian" class="chapter-card">
           <div class="chapter-head">
-            <p class="chapter-number">Bab 5</p>
+            <p class="chapter-number">Bab 7</p>
             <h2 class="chapter-title">Perkalian Matriks</h2>
           </div>
 
@@ -385,7 +526,8 @@
             <p class="body-text">
               Perkalian matriks berbeda dari perkalian skalar. Pada perkalian skalar, semua elemen cukup dikalikan
               dengan satu bilangan. Namun pada perkalian matriks, kita harus mencocokkan satu baris dari matriks pertama
-              dengan satu kolom dari matriks kedua. Setelah itu, pasangan elemen yang bersesuaian dikalikan dan hasilnya dijumlahkan.
+              dengan satu kolom dari matriks kedua. Setelah itu, pasangan elemen yang bersesuaian dikalikan dan hasilnya
+              dijumlahkan.
             </p>
           </div>
 
@@ -417,12 +559,12 @@
                 <div class="matrix-bracket" data-matrix='[[2,1],[3,4]]'></div>
               </div>
               <div class="matrix-card">
-                <p class="matrix-label">Contoh 2: B</p>
-                <div class="matrix-bracket" data-matrix='[[5,2],[1,3]]'></div>
+                <p class="matrix-label">Contoh 2: Aᵀ</p>
+                <div class="matrix-bracket" data-matrix='[[2,3],[1,4]]'></div>
               </div>
               <div class="matrix-card">
-                <p class="matrix-label">A × B</p>
-                <div class="matrix-bracket" data-matrix='[[11,7],[19,18]]'></div>
+                <p class="matrix-label">A × Aᵀ</p>
+                <div class="matrix-bracket" data-matrix='[[5,10],[10,25]]'></div>
               </div>
             </div>
 
@@ -510,7 +652,7 @@
 
         <section id="determinan" class="chapter-card">
           <div class="chapter-head">
-            <p class="chapter-number">Bab 6</p>
+            <p class="chapter-number">Bab 8</p>
             <h2 class="chapter-title">Determinan Matriks Ordo 2 dan Ordo 3</h2>
           </div>
 
@@ -592,7 +734,7 @@
 
         <section id="invers" class="chapter-card">
           <div class="chapter-head">
-            <p class="chapter-number">Bab 7</p>
+            <p class="chapter-number">Bab 9</p>
             <h2 class="chapter-title">Invers Matriks 2 × 2</h2>
           </div>
 
@@ -644,52 +786,162 @@
             </div>
           </div>
 
+
           <h3 class="sub-title">Contoh-contoh</h3>
           <div class="example-grid examples-3">
+
+            <!-- Contoh 1 -->
             <div class="formula-card">
               <p class="matrix-label">Contoh 1</p>
               <div class="matrix-bracket" data-matrix='[[1,2],[3,4]]'></div>
-              <p class="formula-text">det A = −2, maka A⁻¹ diperoleh dari [ [4, −2], [−3, 1] ] dibagi −2.</p>
+              <p class="formula-text">det A = −2, maka</p>
+              <div class="inverse-steps-line">
+                <span class="inverse-var">A⁻¹</span>
+                <span class="inverse-equals">=</span>
+
+                <span class="math-frac">
+                  <span class="top">1</span>
+                  <span class="bottom">−2</span>
+                </span>
+
+                <span class="inverse-times">×</span>
+                <div class="matrix-bracket inline" data-matrix='[[4,-2],[-3,1]]'></div>
+                <span class="inverse-equals">=</span>
+
+                <div class="matrix-shell inline">
+                  <div class="matrix-inner">
+                    <div class="matrix-row">
+                      <span class="matrix-cell">-2</span>
+                      <span class="matrix-cell">1</span>
+                    </div>
+                    <div class="matrix-row">
+                      <span class="matrix-cell">
+                        <span class="math-frac">
+                          <span class="top">3</span>
+                          <span class="bottom">2</span>
+                        </span>
+                      </span>
+                      <span class="matrix-cell">
+                        <span class="math-frac">
+                          <span class="top">-1</span>
+                          <span class="bottom">2</span>
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+
+            <!-- Contoh 2 -->
             <div class="formula-card">
               <p class="matrix-label">Contoh 2</p>
               <div class="matrix-bracket" data-matrix='[[2,1],[5,3]]'></div>
-              <p class="formula-text">det A = 1, sehingga A⁻¹ = [ [3, −1], [−5, 2] ].</p>
+              <p class="formula-text">det A = 1, maka</p>
+              <div class="inverse-steps-line">
+                <span class="inverse-var">A⁻¹</span>
+                <span class="inverse-equals">=</span>
+
+                <span class="math-frac">
+                  <span class="top">1</span>
+                  <span class="bottom">1</span>
+                </span>
+
+                <span class="inverse-times">×</span>
+                <div class="matrix-bracket inline" data-matrix='[[3,-1],[-5,2]]'></div>
+                <span class="inverse-equals">=</span>
+                <div class="matrix-bracket inline" data-matrix='[[3,-1],[-5,2]]'></div>
+              </div>
             </div>
+
+            <!-- Contoh 3 -->
             <div class="formula-card">
               <p class="matrix-label">Contoh 3</p>
               <div class="matrix-bracket" data-matrix='[[4,7],[2,6]]'></div>
-              <p class="formula-text">det A = 10, sehingga A⁻¹ = 1/10 × [ [6, −7], [−2, 4] ].</p>
+              <p class="formula-text">det A = 10, maka</p>
+              <div class="inverse-steps-line">
+                <span class="inverse-var">A⁻¹</span>
+                <span class="inverse-equals">=</span>
+
+                <span class="math-frac">
+                  <span class="top">1</span>
+                  <span class="bottom">10</span>
+                </span>
+
+                <span class="inverse-times">×</span>
+                <div class="matrix-bracket inline" data-matrix='[[6,-7],[-2,4]]'></div>
+                <span class="inverse-equals">=</span>
+
+                <div class="matrix-shell inline">
+                  <div class="matrix-inner">
+                    <div class="matrix-row">
+                      <span class="matrix-cell">
+                        <span class="math-frac">
+                          <span class="top">3</span>
+                          <span class="bottom">5</span>
+                        </span>
+                      </span>
+                      <span class="matrix-cell">
+                        <span class="math-frac">
+                          <span class="top">-7</span>
+                          <span class="bottom">10</span>
+                        </span>
+                      </span>
+                    </div>
+                    <div class="matrix-row">
+                      <span class="matrix-cell">
+                        <span class="math-frac">
+                          <span class="top">-1</span>
+                          <span class="bottom">5</span>
+                        </span>
+                      </span>
+                      <span class="matrix-cell">
+                        <span class="math-frac">
+                          <span class="top">2</span>
+                          <span class="bottom">5</span>
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+
           </div>
+
         </section>
 
         <section id="latihan" class="chapter-card">
           <div class="chapter-head">
-            <p class="chapter-number">Bab 8</p>
+            <p class="chapter-number">Bab 10</p>
             <h2 class="chapter-title">Latihan Interaktif</h2>
           </div>
 
           <p class="body-text">
-            Gunakan pertanyaan berikut untuk menguji apakah aturan-aturan dasar operasi matriks sudah benar-benar
-            dipahami.
+            Gunakan pertanyaan berikut untuk menguji pemahaman tentang jenis matriks, transpose, dan operasi dasar
+            matriks.
           </p>
 
           <div class="exercise-list">
             <div class="exercise-item">
               <span class="exercise-num">1</span>
-              <p>Jelaskan mengapa A berordo 2 × 3 dan B berordo 2 × 2 tidak dapat dijumlahkan.</p>
+              <p>Jelaskan perbedaan matriks baris dan matriks kolom, lalu berikan masing-masing satu contoh.</p>
             </div>
             <div class="exercise-item">
               <span class="exercise-num">2</span>
-              <p>Tentukan ukuran hasil dari perkalian A berordo 3 × 2 dengan B berordo 2 × 4.</p>
+              <p>Tentukan mana yang termasuk matriks diagonal, segitiga bawah, dan segitiga atas dari beberapa contoh
+                yang diberikan guru.</p>
             </div>
             <div class="exercise-item">
               <span class="exercise-num">3</span>
-              <p>Jelaskan dengan kata-kata sendiri bagaimana metode Sarrus bekerja pada determinan 3 × 3.</p>
+              <p>Tentukan Aᵀ jika A = [ [2, 1, 3], [4, 0, 5] ].</p>
             </div>
             <div class="exercise-item">
               <span class="exercise-num">4</span>
+              <p>Jelaskan syarat dua matriks dapat dijumlahkan dan dikurangkan.</p>
+            </div>
+            <div class="exercise-item">
+              <span class="exercise-num">5</span>
               <p>Mengapa matriks 2 × 2 dengan det A = 0 tidak memiliki invers?</p>
             </div>
           </div>
@@ -697,41 +949,52 @@
 
         <section id="kuis" class="chapter-card">
           <div class="chapter-head">
-            <p class="chapter-number">Bab 9</p>
+            <p class="chapter-number">Bab 11</p>
             <h2 class="chapter-title">Kuis Ringkas</h2>
           </div>
 
           <div class="quiz-grid">
             <article class="quiz-card">
               <p class="quiz-number">Soal 1</p>
-              <h3 class="quiz-title">Dua matriks dapat dijumlahkan jika ...</h3>
-              <label class="quiz-option"><input type="radio" name="q1" value="a"> jumlah elemennya sama</label>
-              <label class="quiz-option"><input type="radio" name="q1" value="b"> ordonya sama</label>
-              <label class="quiz-option"><input type="radio" name="q1" value="c"> keduanya matriks identitas</label>
+              <h3 class="quiz-title">Matriks yang hanya memiliki satu baris disebut ...</h3>
+              <label class="quiz-option"><input type="radio" name="q1" value="a"> matriks baris</label>
+              <label class="quiz-option"><input type="radio" name="q1" value="b"> matriks diagonal</label>
+              <label class="quiz-option"><input type="radio" name="q1" value="c"> matriks segitiga bawah</label>
             </article>
 
             <article class="quiz-card">
               <p class="quiz-number">Soal 2</p>
-              <h3 class="quiz-title">A × B dapat dilakukan jika ...</h3>
-              <label class="quiz-option"><input type="radio" name="q2" value="a"> banyak baris A = banyak kolom B</label>
-              <label class="quiz-option"><input type="radio" name="q2" value="b"> banyak kolom A = banyak baris B</label>
-              <label class="quiz-option"><input type="radio" name="q2" value="c"> ordo A = ordo B</label>
+              <h3 class="quiz-title">Transpose matriks diperoleh dengan cara ...</h3>
+              <label class="quiz-option"><input type="radio" name="q2" value="a"> menukar baris menjadi kolom</label>
+              <label class="quiz-option"><input type="radio" name="q2" value="b"> mengalikan semua elemen dengan
+                2</label>
+              <label class="quiz-option"><input type="radio" name="q2" value="c"> menjumlahkan semua elemen</label>
             </article>
 
             <article class="quiz-card">
               <p class="quiz-number">Soal 3</p>
-              <h3 class="quiz-title">Metode Sarrus digunakan untuk ...</h3>
-              <label class="quiz-option"><input type="radio" name="q3" value="a"> mencari jumlah semua elemen matriks</label>
-              <label class="quiz-option"><input type="radio" name="q3" value="b"> menentukan determinan matriks 3 × 3</label>
-              <label class="quiz-option"><input type="radio" name="q3" value="c"> mengubah matriks menjadi identitas</label>
+              <h3 class="quiz-title">Dua matriks dapat dijumlahkan jika ...</h3>
+              <label class="quiz-option"><input type="radio" name="q3" value="a"> jumlah elemennya sama</label>
+              <label class="quiz-option"><input type="radio" name="q3" value="b"> ordonya sama</label>
+              <label class="quiz-option"><input type="radio" name="q3" value="c"> keduanya matriks identitas</label>
             </article>
 
             <article class="quiz-card">
               <p class="quiz-number">Soal 4</p>
+              <h3 class="quiz-title">A × B dapat dilakukan jika ...</h3>
+              <label class="quiz-option"><input type="radio" name="q4" value="a"> banyak baris A = banyak kolom
+                B</label>
+              <label class="quiz-option"><input type="radio" name="q4" value="b"> banyak kolom A = banyak baris
+                B</label>
+              <label class="quiz-option"><input type="radio" name="q4" value="c"> ordo A = ordo B</label>
+            </article>
+
+            <article class="quiz-card">
+              <p class="quiz-number">Soal 5</p>
               <h3 class="quiz-title">Matriks 2 × 2 tidak memiliki invers jika ...</h3>
-              <label class="quiz-option"><input type="radio" name="q4" value="a"> determinannya nol</label>
-              <label class="quiz-option"><input type="radio" name="q4" value="b"> diagonal utamanya sama</label>
-              <label class="quiz-option"><input type="radio" name="q4" value="c"> semua elemennya positif</label>
+              <label class="quiz-option"><input type="radio" name="q5" value="a"> determinannya nol</label>
+              <label class="quiz-option"><input type="radio" name="q5" value="b"> diagonal utamanya sama</label>
+              <label class="quiz-option"><input type="radio" name="q5" value="c"> semua elemennya positif</label>
             </article>
           </div>
 
@@ -753,7 +1016,7 @@
 
   <footer class="border-t border-slate-200 bg-white">
     <div class="mx-auto max-w-7xl px-4 py-6 text-center text-sm text-slate-500 sm:px-6 lg:px-8">
-      Media belajar operasi matriks untuk siswa kelas XI SMA — versi v6
+      Media belajar operasi matriks untuk siswa kelas XI SMA — versi v7
     </div>
   </footer>
 
