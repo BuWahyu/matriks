@@ -34,26 +34,51 @@
 
 <body class="bg-slate-50 text-slate-800">
   <header class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur">
-    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-      <a href="#materi-inti" class="flex items-center gap-3">
-        <img src="img/bu-wahyu.jpg" alt="Foto Bu Wahyu" class="w-12 h-12 object-cover rounded-full">
+  <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
 
-        <div>
-          <h1 class="text-lg font-semibold text-slate-900">
-            Operasi Matriks Interaktif
+    <a href="#materi-inti" class="flex items-center gap-3 min-w-0">
+      <img
+        src="img/bu-wahyu.jpg"
+        alt="Foto Bu Wahyu"
+        class="h-12 w-12 flex-shrink-0 rounded-full object-cover ring-2 ring-slate-200"
+      >
+
+      <div class="min-w-0">
+        <div class="flex items-center gap-2 flex-wrap">
+          <h1 class="truncate text-base font-bold leading-tight text-slate-900 sm:text-xl">
+            Operasi Matriks
           </h1>
-          <p class="text-sm text-indigo-600 font-medium">
-            Bersama Bu Wahyu
-          </p>
-        </div>
-      </a>
 
-      <a href="#materi-inti"
-        class="rounded-full bg-slate-900 px-4 py-2 text-sm font-semibold text-white transition hover:bg-slate-800">
-        Mulai Belajar
-      </a>
-    </div>
-  </header>
+          <span class="hidden sm:inline-block rounded-full bg-indigo-100 px-2 py-0.5 text-xs font-semibold text-indigo-700">
+            Kelas Matematika
+          </span>
+        </div>
+
+        <p class="truncate text-xs text-slate-600 sm:text-sm">
+          Media Pembelajaran • Bersama Bu Wahyu Wijyanti, S.Pd., M.Pd.
+        </p>
+      </div>
+    </a>
+
+    <a
+      href="#materi-inti"
+      class="ml-3 hidden flex-shrink-0 rounded-full bg-slate-900 px-4 py-2 text-sm font-semibold text-white transition hover:bg-slate-800 sm:inline-block"
+    >
+      Mulai Belajar
+    </a>
+
+  </div>
+
+  <!-- tombol khusus mobile -->
+  <div class="px-4 pb-3 sm:hidden">
+    <a
+      href="#materi-inti"
+      class="block w-full rounded-full bg-slate-900 px-4 py-2 text-center text-sm font-semibold text-white transition hover:bg-slate-800"
+    >
+      Mulai Belajar
+    </a>
+  </div>
+</header>
 
   <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
     <div class="grid gap-6 lg:grid-cols-[300px_minmax(0,1fr)]">
