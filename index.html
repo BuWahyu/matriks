@@ -36,7 +36,7 @@
   <header class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur">
     <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
       <a href="#hero" class="flex items-center gap-3">
-        <img src="img/bu-wahyu.jpg" alt="Logo Jawa Tengah" class="w-12 h-12 object-contain">
+        <img src="img/bu-wahyu.jpg" alt="Foto Bu Wahyu" class="w-12 h-12 object-contain rounded-full">
 
         <div>
           <h1 class="text-lg font-semibold text-slate-900">
@@ -64,11 +64,12 @@
             <a class="sidebar-link" href="#intro">1. Pendahuluan Matriks</a>
             <a class="sidebar-link" href="#penjumlahan">2. Penjumlahan Matriks</a>
             <a class="sidebar-link" href="#pengurangan">3. Pengurangan Matriks</a>
-            <a class="sidebar-link" href="#perkalian">4. Perkalian Matriks</a>
-            <a class="sidebar-link" href="#determinan">5. Determinan Ordo 2 dan 3</a>
-            <a class="sidebar-link" href="#invers">6. Invers Matriks 2 × 2</a>
-            <a class="sidebar-link" href="#latihan">7. Latihan Interaktif</a>
-            <a class="sidebar-link" href="#kuis">8. Kuis Ringkas</a>
+            <a class="sidebar-link" href="#skalar">4. Perkalian Skalar dengan Matriks</a>
+            <a class="sidebar-link" href="#perkalian">5. Perkalian Matriks</a>
+            <a class="sidebar-link" href="#determinan">6. Determinan Ordo 2 dan 3</a>
+            <a class="sidebar-link" href="#invers">7. Invers Matriks 2 × 2</a>
+            <a class="sidebar-link" href="#latihan">8. Latihan Interaktif</a>
+            <a class="sidebar-link" href="#kuis">9. Kuis Ringkas</a>
           </nav>
 
           <div class="mt-6 rounded-2xl bg-slate-50 p-4 ring-1 ring-slate-200">
@@ -85,17 +86,27 @@
         
 
         <section id="materi-inti" class="rounded-[32px] border border-slate-200 bg-white p-6 shadow-card sm:p-8">
-          <div class="section-head">
-            <p class="section-eyebrow">Pengantar</p>
-            <h2 class="section-title">Materi dibuat lebih dekat dengan cara guru menjelaskan di kelas</h2>
-            <p class="section-desc">
-              Siswa biasanya lebih mudah memahami matriks ketika bentuk penyajiannya mirip dengan yang mereka lihat di
-              buku atau saat guru menulis di papan. Karena itu, pada versi ini bentuk matriks ditampilkan dengan kurung
-              matriks, notasi menggunakan huruf kapital, dan langkah-langkah visual ditempatkan tepat setelah penjelasan
-              konsepnya.
-            </p>
-          </div>
-        </section>
+  <div class="section-head">
+    <p class="section-eyebrow">Pengantar</p>
+    <h2 class="section-title">Manfaat belajar matriks dalam kehidupan</h2>
+    <p class="section-desc">
+      Matriks tidak hanya dipelajari untuk menjawab soal matematika di kelas, tetapi juga berguna dalam banyak bidang
+      kehidupan. Konsep matriks dipakai untuk mengatur data, menyusun informasi dalam bentuk tabel, dan membantu
+      perhitungan yang melibatkan banyak nilai sekaligus.
+    </p>
+    <p class="section-desc">
+      Dalam kehidupan sehari-hari, matriks dapat dikaitkan dengan pengolahan nilai siswa, jadwal pelajaran, data
+      penjualan, data keuangan, hingga pengaturan tempat duduk atau susunan barang. Dalam bidang teknologi, konsep
+      matriks juga digunakan pada komputer, pengolahan gambar, permainan digital, kecerdasan buatan, dan berbagai
+      aplikasi sains.
+    </p>
+    <p class="section-desc">
+      Dengan belajar matriks, siswa dilatih untuk berpikir teratur, teliti, dan sistematis. Karena itu, materi ini
+      penting bukan hanya untuk pelajaran matematika, tetapi juga untuk melatih cara berpikir logis dalam memecahkan
+      masalah.
+    </p>
+  </div>
+</section>
 
         <section id="intro" class="chapter-card">
           <div class="chapter-head">
@@ -275,16 +286,107 @@
           </div>
         </section>
 
-        <section id="perkalian" class="chapter-card">
+        <section id="skalar" class="chapter-card">
           <div class="chapter-head">
             <p class="chapter-number">Bab 4</p>
+            <h2 class="chapter-title">Perkalian Skalar dengan Matriks</h2>
+          </div>
+
+          <h3 class="sub-title">Konsep</h3>
+          <div class="box-konsep">
+            Perkalian skalar dengan matriks adalah operasi mengalikan satu bilangan dengan setiap elemen
+            pada suatu matriks. Bilangan tersebut disebut skalar. Jadi, jika sebuah matriks dikalikan
+            dengan 2, maka semua elemennya juga dikalikan 2.
+          </div>
+
+          <h3 class="sub-title">Rumus</h3>
+          <div class="box-rumus">
+            Jika k adalah skalar dan A = [aᵢⱼ], maka kA = [k · aᵢⱼ].
+          </div>
+
+          <h3 class="sub-title">Penjelasan</h3>
+          <p class="body-text">
+            Pada perkalian skalar, sebuah bilangan dikalikan ke setiap elemen dalam matriks. Artinya,
+            semua elemen di dalam matriks mengalami perubahan dengan faktor yang sama. Jika skalarnya
+            bernilai positif, tanda elemen tetap. Jika skalarnya bernilai negatif, tanda setiap elemen
+            juga ikut berubah. Karena itu, siswa perlu teliti terutama saat mengalikan dengan bilangan negatif.
+          </p>
+
+          <p class="body-text">
+            Operasi ini sering digunakan untuk memperbesar nilai setiap elemen, memperkecilnya, atau
+            membalik tanda seluruh elemen dalam matriks. Yang penting diingat, tidak ada elemen yang
+            dibiarkan tetap: semuanya harus dikalikan dengan skalar yang sama.
+          </p>
+
+          <h3 class="sub-title">Contoh-contoh</h3>
+          <div class="example-stack">
+            <div class="triple-example">
+              <div class="matrix-card">
+                <p class="matrix-label">Contoh 1: A</p>
+                <div class="formula-text">2 × A, dengan</div>
+                <div class="matrix-bracket" data-matrix='[[1,2],[3,4]]'></div>
+              </div>
+              <div class="matrix-card">
+                <p class="matrix-label">Proses</p>
+                <p class="formula-text">Setiap elemen pada A dikali 2</p>
+              </div>
+              <div class="matrix-card">
+                <p class="matrix-label">Hasil</p>
+                <div class="matrix-bracket" data-matrix='[[2,4],[6,8]]'></div>
+              </div>
+            </div>
+
+            <div class="triple-example">
+              <div class="matrix-card">
+                <p class="matrix-label">Contoh 2: B</p>
+                <div class="formula-text">3 × B, dengan</div>
+                <div class="matrix-bracket" data-matrix='[[2,0,1],[4,5,3]]'></div>
+              </div>
+              <div class="matrix-card">
+                <p class="matrix-label">Proses</p>
+                <p class="formula-text">Semua elemen B dikali 3</p>
+              </div>
+              <div class="matrix-card">
+                <p class="matrix-label">Hasil</p>
+                <div class="matrix-bracket" data-matrix='[[6,0,3],[12,15,9]]'></div>
+              </div>
+            </div>
+
+            <div class="triple-example">
+              <div class="matrix-card">
+                <p class="matrix-label">Contoh 3: A</p>
+                <div class="formula-text">−2 × A, dengan</div>
+                <div class="matrix-bracket" data-matrix='[[3,-1],[2,5]]'></div>
+              </div>
+              <div class="matrix-card">
+                <p class="matrix-label">Proses</p>
+                <p class="formula-text">Semua elemen A dikali −2</p>
+              </div>
+              <div class="matrix-card">
+                <p class="matrix-label">Hasil</p>
+                <div class="matrix-bracket" data-matrix='[[-6,2],[-4,-10]]'></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="box-ingat">
+            Ingat: pada perkalian skalar, setiap elemen pada matriks dikalikan dengan bilangan yang sama.
+          </div>
+        </section>
+
+        <section id="perkalian" class="chapter-card">
+          <div class="chapter-head">
+            <p class="chapter-number">Bab 5</p>
             <h2 class="chapter-title">Perkalian Matriks</h2>
           </div>
 
           <h3 class="sub-title">Konsep</h3>
           <div class="box-konsep">
-            Perkalian matriks dilakukan dengan mencocokkan satu baris dari matriks pertama dengan satu kolom dari
-            matriks kedua. Pasangan elemen pada baris dan kolom tersebut dikalikan, kemudian hasilnya dijumlahkan.
+            <p class="body-text">
+              Perkalian matriks berbeda dari perkalian skalar. Pada perkalian skalar, semua elemen cukup dikalikan
+              dengan satu bilangan. Namun pada perkalian matriks, kita harus mencocokkan satu baris dari matriks pertama
+              dengan satu kolom dari matriks kedua. Setelah itu, pasangan elemen yang bersesuaian dikalikan dan hasilnya dijumlahkan.
+            </p>
           </div>
 
           <h3 class="sub-title">Rumus dan Syarat</h3>
@@ -408,7 +510,7 @@
 
         <section id="determinan" class="chapter-card">
           <div class="chapter-head">
-            <p class="chapter-number">Bab 5</p>
+            <p class="chapter-number">Bab 6</p>
             <h2 class="chapter-title">Determinan Matriks Ordo 2 dan Ordo 3</h2>
           </div>
 
@@ -490,7 +592,7 @@
 
         <section id="invers" class="chapter-card">
           <div class="chapter-head">
-            <p class="chapter-number">Bab 6</p>
+            <p class="chapter-number">Bab 7</p>
             <h2 class="chapter-title">Invers Matriks 2 × 2</h2>
           </div>
 
@@ -564,7 +666,7 @@
 
         <section id="latihan" class="chapter-card">
           <div class="chapter-head">
-            <p class="chapter-number">Bab 7</p>
+            <p class="chapter-number">Bab 8</p>
             <h2 class="chapter-title">Latihan Interaktif</h2>
           </div>
 
@@ -595,7 +697,7 @@
 
         <section id="kuis" class="chapter-card">
           <div class="chapter-head">
-            <p class="chapter-number">Bab 8</p>
+            <p class="chapter-number">Bab 9</p>
             <h2 class="chapter-title">Kuis Ringkas</h2>
           </div>
 
