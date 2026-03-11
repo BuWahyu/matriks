@@ -606,13 +606,10 @@ body {
 }
 
 .inverse-steps-line {
-  margin-top: 1.25rem;
   display: flex;
   align-items: center;
-  gap: 0.85rem;
+  gap: 8px;
   flex-wrap: wrap;
-  font-size: 1.2rem;
-  color: rgb(15 23 42);
 }
 
 .inverse-formula-frac {
@@ -816,4 +813,62 @@ padding:14px;
 border-radius:10px;
 margin-top:10px;
 font-size:14px;
+}
+/* pecahan matematika */
+.frac {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+.frac .top {
+  display: block;
+  border-bottom: 1.5px solid #000;
+  padding: 0 2px;
+  font-size: 0.9em;
+}
+
+.frac .bottom {
+  display: block;
+  padding: 0 2px;
+  font-size: 0.9em;
+}
+/* pecahan matematika */
+.math-frac {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  min-width: 24px;
+  font-size: 0.95em;
+}
+
+/* garis pecahan */
+.math-frac .top {
+  border-bottom: 1.5px solid #111;
+  padding: 0 4px 2px 4px;
+}
+
+.math-frac .bottom {
+  padding: 2px 4px 0 4px;
+}
+
+.matrix-cell {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.matrix-cell .math-frac {
+  transform: scale(0.95);
+}
+/* agar pecahan dan matriks sejajar */
+.inverse-steps-line .math-frac {
+  transform: translateY(-1px);
+}
+
+/* matriks inline */
+.matrix-shell.inline {
+  margin: 0 4px;
 }
