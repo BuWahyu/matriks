@@ -1,17 +1,25 @@
 function parseMatrix(text) {
-  const rows = text.trim().split("\n").map(r => r.trim()).filter(Boolean);
+  const rows = text
+    .trim()
+    .split("\n")
+    .map((r) => r.trim())
+    .filter(Boolean);
   if (!rows.length) return { error: "Matriks belum diisi." };
 
-  const matrix = rows.map(row =>
-    row.split(/[ ,]+/).map(v => v.trim()).filter(Boolean).map(Number)
+  const matrix = rows.map((row) =>
+    row
+      .split(/[ ,]+/)
+      .map((v) => v.trim())
+      .filter(Boolean)
+      .map(Number),
   );
 
-  if (matrix.some(row => row.some(v => Number.isNaN(v)))) {
+  if (matrix.some((row) => row.some((v) => Number.isNaN(v)))) {
     return { error: "Semua elemen matriks harus berupa angka." };
   }
 
   const colCount = matrix[0].length;
-  if (colCount === 0 || matrix.some(row => row.length !== colCount)) {
+  if (colCount === 0 || matrix.some((row) => row.length !== colCount)) {
     return { error: "Setiap baris harus memiliki jumlah kolom yang sama." };
   }
 
@@ -19,11 +27,15 @@ function parseMatrix(text) {
 }
 
 function formatNumber(value) {
-  return Number.isInteger(value) ? String(value) : Number(value.toFixed(2)).toString();
+  return Number.isInteger(value)
+    ? String(value)
+    : Number(value.toFixed(2)).toString();
 }
 
 function multiplyMatrices(a, b) {
-  const result = Array.from({ length: a.length }, () => Array(b[0].length).fill(0));
+  const result = Array.from({ length: a.length }, () =>
+    Array(b[0].length).fill(0),
+  );
   for (let i = 0; i < a.length; i++) {
     for (let j = 0; j < b[0].length; j++) {
       for (let k = 0; k < b.length; k++) {
@@ -35,15 +47,19 @@ function multiplyMatrices(a, b) {
 }
 
 function matrixToBracketHTML(matrix) {
-  const rowsHTML = matrix.map(row => {
-    const cells = row.map(v => `<span class="matrix-cell">${formatNumber(v)}</span>`).join("");
-    return `<div class="matrix-row">${cells}</div>`;
-  }).join("");
+  const rowsHTML = matrix
+    .map((row) => {
+      const cells = row
+        .map((v) => `<span class="matrix-cell">${formatNumber(v)}</span>`)
+        .join("");
+      return `<div class="matrix-row">${cells}</div>`;
+    })
+    .join("");
   return `<div class="matrix-shell"><div class="matrix-inner">${rowsHTML}</div></div>`;
 }
 
 function renderStaticMatrices() {
-  document.querySelectorAll(".matrix-bracket").forEach(el => {
+  document.querySelectorAll(".matrix-bracket").forEach((el) => {
     const data = el.getAttribute("data-matrix");
     if (!data) return;
     const matrix = JSON.parse(data);
@@ -59,20 +75,26 @@ function renderSarrus() {
   const matrix = [
     [4, 2, 8],
     [2, 1, 5],
-    [3, 2, 4]
+    [3, 2, 4],
   ];
 
-  left.innerHTML = matrix.flat().map(v => `<span>${v}</span>`).join("");
+  left.innerHTML = matrix
+    .flat()
+    .map((v) => `<span>${v}</span>`)
+    .join("");
   const ext = [
     [4, 2],
     [2, 1],
-    [3, 2]
+    [3, 2],
   ];
-  right.innerHTML = ext.flat().map(v => `<span>${v}</span>`).join("");
+  right.innerHTML = ext
+    .flat()
+    .map((v) => `<span>${v}</span>`)
+    .join("");
 }
 
 function setStep(stepIndex) {
-  [1,2,3,4].forEach(i => {
+  [1, 2, 3, 4].forEach((i) => {
     const el = document.getElementById("step" + i);
     if (!el) return;
     if (i === stepIndex) el.classList.add("active");
@@ -109,7 +131,8 @@ function animateMultiplication(row, col, total) {
 }
 
 function showMultiplyResult(resultMatrix, explanation) {
-  document.getElementById("resultMatrix").innerHTML = matrixToBracketHTML(resultMatrix);
+  document.getElementById("resultMatrix").innerHTML =
+    matrixToBracketHTML(resultMatrix);
   document.getElementById("multiplyExplanation").textContent = explanation;
 }
 
@@ -130,19 +153,23 @@ function calculateMultiply() {
   const B = parsedB.matrix;
 
   if (A[0].length !== B.length) {
-    showMultiplyResult([[0]], `Perkalian tidak dapat dilakukan karena jumlah kolom A = ${A[0].length}, sedangkan jumlah baris B = ${B.length}.`);
+    showMultiplyResult(
+      [[0]],
+      `Perkalian tidak dapat dilakukan karena jumlah kolom A = ${A[0].length}, sedangkan jumlah baris B = ${B.length}.`,
+    );
     return;
   }
 
   const result = multiplyMatrices(A, B);
   const row = A[0];
-  const col = B.map(r => r[0]);
+  const col = B.map((r) => r[0]);
   const total = row.reduce((sum, v, i) => sum + v * col[i], 0);
 
   const explanation =
     `A berordo ${A.length} × ${A[0].length} dan B berordo ${B.length} × ${B[0].length}, sehingga A × B dapat dilakukan. ` +
     `Hasilnya berordo ${A.length} × ${B[0].length}. Untuk elemen pertama hasil, kita ambil baris pertama A dan kolom pertama B: ` +
-    row.map((v, i) => `${v} × ${col[i]}`).join(" + ") + ` = ${total}.`;
+    row.map((v, i) => `${v} × ${col[i]}`).join(" + ") +
+    ` = ${total}.`;
 
   showMultiplyResult(result, explanation);
   animateMultiplication(row, col, total);
@@ -167,7 +194,7 @@ function loadMultiplySample3() {
 }
 
 function checkQuiz() {
-  const answers = { q1: "b", q2: "b", q3: "b", q4: "a" };
+  const answers = { q1: "a", q2: "a", q3: "b", q4: "b", q5: "a" };
   let score = 0;
   const feedback = [];
 
@@ -185,15 +212,17 @@ function checkQuiz() {
     }
   });
 
-  const percent = Math.round((score / 4) * 100);
+  const percent = Math.round((score / 5) * 100);
   document.getElementById("quizResult").textContent =
-    `Skor Anda: ${score} dari 4 (${percent}%). ` +
+    `Skor Anda: ${score} dari 5 (${percent}%). ` +
     feedback.join(" ") +
-    ` Kunci konsep: penjumlahan dan pengurangan memerlukan ordo yang sama, perkalian memerlukan kolom A = baris B, metode Sarrus digunakan untuk determinan 3 × 3, dan invers tidak ada jika det A = 0.`;
+    ` Kunci konsep: matriks baris memiliki satu baris, transpose diperoleh dengan menukar baris dan kolom, penjumlahan memerlukan ordo yang sama, perkalian memerlukan kolom A = baris B, dan invers tidak ada jika det A = 0.`;
 }
 
 function resetQuiz() {
-  document.querySelectorAll('input[type="radio"]').forEach(input => input.checked = false);
+  document
+    .querySelectorAll('input[type="radio"]')
+    .forEach((input) => (input.checked = false));
   document.getElementById("quizResult").textContent = "Belum diperiksa.";
 }
 
@@ -202,10 +231,18 @@ document.addEventListener("DOMContentLoaded", () => {
   renderSarrus();
   calculateMultiply();
 
-  document.getElementById("btnMultiply").addEventListener("click", calculateMultiply);
-  document.getElementById("btnSampleMultiply1").addEventListener("click", loadMultiplySample1);
-  document.getElementById("btnSampleMultiply2").addEventListener("click", loadMultiplySample2);
-  document.getElementById("btnSampleMultiply3").addEventListener("click", loadMultiplySample3);
+  document
+    .getElementById("btnMultiply")
+    .addEventListener("click", calculateMultiply);
+  document
+    .getElementById("btnSampleMultiply1")
+    .addEventListener("click", loadMultiplySample1);
+  document
+    .getElementById("btnSampleMultiply2")
+    .addEventListener("click", loadMultiplySample2);
+  document
+    .getElementById("btnSampleMultiply3")
+    .addEventListener("click", loadMultiplySample3);
   document.getElementById("btnAnimate").addEventListener("click", () => {
     const parsedA = parseMatrix(document.getElementById("matrixA").value);
     const parsedB = parseMatrix(document.getElementById("matrixB").value);
@@ -214,7 +251,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const B = parsedB.matrix;
     if (A[0].length !== B.length) return;
     const row = A[0];
-    const col = B.map(r => r[0]);
+    const col = B.map((r) => r[0]);
     const total = row.reduce((sum, v, i) => sum + v * col[i], 0);
     animateMultiplication(row, col, total);
   });
